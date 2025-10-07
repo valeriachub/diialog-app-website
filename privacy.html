@@ -10,15 +10,20 @@
 
 <body>
     <header>
-        <div class="logo">
+        <a href="/" class="logo">
             <img src="images/logo.png" alt="Diialog Logo" class="logo-img">
             <strong>Diialog</strong>
-        </div>
-        <nav>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
             <a href="index.html">Про застосунок</a>
             <a href="privacy.html" class="active">Політика конфіденційності</a>
             <a href="terms.html">Умови користування</a>
         </nav>
+
+        <div class="menu-icon" id="menuIcon">
+            ☰
+        </div>
     </header>
 
     </header>
@@ -99,6 +104,15 @@
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;
             });
+    </script>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const navLinks = document.getElementById('navLinks');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
     </script>
 
 </body>

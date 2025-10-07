@@ -11,16 +11,20 @@
 <body>
 
     <header>
-        <div class="logo">
+        <a href="/" class="logo">
             <img src="images/logo.png" alt="Diialog Logo" class="logo-img">
             <strong>Diialog</strong>
-        </div>
+        </a>
 
-        <nav>
+        <nav class="nav-links" id="navLinks">
             <a href="index.html" class="active">Про застосунок</a>
             <a href="privacy.html">Політика конфіденційності</a>
             <a href="terms.html">Умови користування</a>
         </nav>
+
+        <div class="menu-icon" id="menuIcon">
+            ☰
+        </div>
     </header>
 
     <div class="container">
@@ -52,7 +56,7 @@
             <ul>
                 <li>Нових пар, щоб швидше зблизитися</li>
                 <li>Тривалих стосунків, щоб підтримувати теплоту</li>
-                <li>Партнервв, які хочуть навчитися говорити відкрито</li>
+                <li>Партнерів, які хочуть навчитися говорити відкрито</li>
             </ul>
 
             <h3>Як це працює:</h3>
@@ -63,6 +67,7 @@
                 <li>Ставайте ближчими з кожним запитанням</li>
             </ol>
         </section>
+        <br>
 
         <section id="support">
             <h2>Підтримка</h2>
@@ -83,6 +88,15 @@
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;
             });
+    </script>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const navLinks = document.getElementById('navLinks');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
     </script>
 
 </body>
