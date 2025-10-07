@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diialog - мобільний застосунок для пар</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Diialog Logo" class="logo-img">
+            <strong>Diialog</strong>
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Про застосунок</a>
+            <a href="privacy.html">Політика конфіденційності</a>
+            <a href="terms.html">Умови користування</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="hero">
+            <div class="hero-content">
+                <h1>💬 Diialog — мобільний застосунок, який допомагає парам стати ближчими</h1>
+                <p>Відкрийте новий рівень спілкування у стосунках. Простий інтерфейс, глибокі запитання, справжні
+                    розмови.</p>
+                <a class="download-btn" href="https://www.instagram.com/diialog.app" target="_blank"
+                    rel="noopener noreferrer">Завантажити в App Store</a>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <h2>Про застосунок</h2>
+            <p>Diialog створений для пар, які хочуть краще розуміти одне одного.</p>
+            <p>У додатку — картки з питаннями, що відкривають щирі розмови про почуття, цінності, майбутнє та мрії.</p>
+
+            <div class="image-gallery">
+                <img src="images/screen-1.png">
+                <img src="images/screen-2.png">
+                <img src="images/screen-3.png">
+                <img src="images/screen-4.png">
+                <img src="images/screen-5.png">
+            </div>
+
+            <h3>🎯 Підходить для:</h3>
+            <ul>
+                <li>Нових пар, щоб швидше зблизитися</li>
+                <li>Тривалих стосунків, щоб підтримувати теплоту</li>
+                <li>Партнервв, які хочуть навчитися говорити відкрито</li>
+            </ul>
+
+            <h3>Як це працює:</h3>
+            <ol>
+                <li>Оберіть сет карток</li>
+                <li>Відповідайте разом</li>
+                <li>Відслідковуйте свій прогрес</li>
+                <li>Ставайте ближчими з кожним запитанням</li>
+            </ol>
+        </section>
+
+        <section id="support">
+            <h2>Підтримка</h2>
+            <p>
+                Якщо у вас є запитання або пропозиції, пишіть нам на
+                <a href="mailto:diialog.app@gmail.com" class="email-link">diialog.app@gmail.com</a>.
+                Ми відповімо протягом 48 годин.
+            </p>
+        </section>
+
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>
